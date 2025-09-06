@@ -1,0 +1,8 @@
+alias c="clear"
+alias e="exit"
+alias garbage="cd $HOME/Garbage"
+alias para="cd $HOME/Documents/PARA/"
+alias paraPush="$MY_LOCDIR_CLOUD_RCLONE_SYNC_DIR/safe-rclone-sync.sh ${MY_SYNC_DIR_LOCAL} ${MY_RCLONE_REMOTE}:${MY_SYNC_DIR} --backup-dir ${MY_RCLONE_REMOTE}:${MY_BACKUPS_DIR}/${MY_SYNC_DIR}/$(date -I) -vv"
+alias paraPull="$MY_LOCDIR_CLOUD_RCLONE_SYNC_DIR/safe-rclone-sync.sh ${MY_RCLONE_REMOTE}:${MY_SYNC_DIR} ${MY_SYNC_DIR_LOCAL} --backup-dir ${MY_BACKUPS_DIR_LOCAL}/$(date -I) -vv"
+alias paraPushForce="rclone sync ${MY_SYNC_DIR_LOCAL} ${MY_RCLONE_REMOTE}:${MY_SYNC_DIR} --backup-dir ${MY_RCLONE_REMOTE}:${MY_BACKUPS_DIR}/${MY_SYNC_DIR}/$(date -I) -vv"
+alias paraPullForce="rclone sync ${MY_RCLONE_REMOTE}:${MY_SYNC_DIR} ${MY_SYNC_DIR_LOCAL} --backup-dir ${MY_BACKUPS_DIR_LOCAL}/$(date -I) -vv"
